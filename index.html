@@ -40,7 +40,23 @@
         </div>
     </header>
     <main>
-        <div class="experiance-fullscreen-container" id="experiance-fullscreen-container"></div>
+      <div class="controls">
+          <div class="control active-btn" data-id="home" >
+              <i class="fas fa-home"></i>
+          </div>
+          <div class="control" data-id="about">
+              <i class="fas fa-user"></i>
+          </div>
+          <div class="control" data-id="portfolio">
+              <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="control" data-id="blogs" style="display: none;">
+              <i class="far fa-newspaper"></i>
+          </div>
+          <div class="control" data-id="contact">
+              <i class="fas fa-envelope-open"></i>
+          </div>
+      </div>
 
         <section class="container about" id="about">
             <div class="main-title">
@@ -207,14 +223,11 @@
                     <div class="image">
                         <img src="img/img1.jpg" alt="">
                     </div>
-                    <div class="hover-items">
+                    <div class="hover-items control" data-id="FRC2022">
                         <h3>Project Source</h3>
                         <div class="icons">
                             <a href="https://www.thebluealliance.com/team/2137/2021" class="icon" target="_blank">
                                 <i class="fas fa-link"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
                             </a>
                             <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
@@ -233,9 +246,6 @@
                                 <i class="fab fa-github"></i>
                             </a>
                             <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -250,9 +260,6 @@
                         <div class="icons">
                             <a href="#" class="icon">
                                 <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
                             </a>
                             <a href="https://www.youtube.com/watch?v=QloYJaMhsfs" class="icon" target="_blank">
                                 <i class="fab fa-youtube"></i>
@@ -271,9 +278,6 @@
                                 <i class="fab fa-github"></i>
                             </a>
                             <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -288,9 +292,6 @@
                         <div class="icons">
                             <a href="#" class="icon">
                                 <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
                             </a>
                             <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
@@ -309,9 +310,6 @@
                                 <i class="fab fa-github"></i>
                             </a>
                             <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -328,9 +326,6 @@
                                 <i class="fab fa-github"></i>
                             </a>
                             <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
                                 <i class="fas fa-link"></i>
                             </a>
                         </div>
@@ -338,7 +333,60 @@
                 </div>
             </div>
         </section>
-        <section class="container" id="blogs">
+
+        <!--FRC 2022-->
+        <section class="container" id="FRC2022">
+            <div>
+                <div class="main-title">
+                    <h2>2022 <span></span><span class="bg-text">FIRST Robotics</span></h2>
+                </div>
+
+                <table>
+                  <tr>
+                    <th>
+                      <h2>Drive Train</h2>
+                      <img src="img/swerve_mod.png"></img>
+                      <p>
+                        In the realm of robotics and mechatronics, the Swerve
+                        Chassis stands as a remarkable innovation that combines
+                        precision, agility, and versatility. The Swerve Chassis
+                        imploys four rotational and translational axis which
+                        adds complexity when coming to comfiguring the forward
+                        and reverse kinematic equations. My role was to develop
+                        the equations for the forward and reverse kinematic so
+                        given only 3 input (left/right,forward/reverse,turning)
+                        all four wheels act in conjunction.
+                      </p>
+                    </th>
+                    <th>
+                      <h2>Launcher</h2>
+                      <p>
+                        For this season we dicided to implement a two wheel
+                        launcher which would allow for use to add precise amounts
+                        of spin on the game ball. I prototyped, assisted in
+                        design, and completed the programming for math involving
+                        launching the ball. Using variable spin and launch
+                        distance was able to make an adapive launcher that could
+                        score the ball from any place on the field.
+                      </p>
+                    </th>
+                    <th>Country</th>
+                  </tr>
+                  <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                  </tr>
+                  <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                  </tr>
+                </table>
+            </div>
+        </section>
+
+        <section class="container" id="blogs" style="display: none;">
             <div>
                 <div class="main-title">
                     <h2>Experience <span></span><span class="bg-text">Tools Used</span></h2>
@@ -359,7 +407,7 @@
                             <div class="experiance-icon-circle"></div>
                             <div class="experiance-icon-circle"></div>
                             <div class="experiance-icon-circle"></div>
-                        </div>                        
+                        </div>
                         <div>
                             <div class="experiance-icon-circle"></div>
                             <div class="experiance-icon-circle"></div>
@@ -367,21 +415,50 @@
                         </div>
                     </div>
 
-                    <div class="experiance-subtopic-circle">
+                    <div class="experiance-subtopic-circle"  onclick="open_description_click(this.id)" id="cad">
                         <h2><i class="fa fa-pencil-ruler" style="zoom: 200%;"></i> <br>CAD</h2>
                     </div>
-                    <div class="experiance-subtopic-circle">
+                    <div class="experiance-description-circle" id="cad_description">
+                        <div>
+                            <div class="experiance-icon-circle">
+                              <a herf="https://www.solidworks.com/" target="_blank">
+                                <img src="img/sw.png" class="experiance-icon" alt="">
+                              </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="experiance-icon-circle"><a herf="https://www.autodesk.com/products/inventor/" target="_blank"><img src="img/inv.png" class="experiance-icon" alt=""></a></div>
+                        </div>
+                        <div>
+                            <div class="experiance-icon-circle"><a herf="https://www.autodesk.com/products/fusion-360" target="_blank"><img src="img/fusion.png" class="experiance-icon" alt=""></a></div>
+                        </div>
+                    </div>
+
+                    <div class="experiance-subtopic-circle"  onclick="open_description_click(this.id)" id="protocol">
                         <h2><i class="fa fa-signal" style="zoom: 200%;"></i> <br>Protocol</h2>
                     </div>
+                    <div class="experiance-description-circle" id="protocol_description">
+                        <div>
+                            <div class="experiance-icon-circle"><a herf="https://www.solidworks.com/" target="_blank"><img src="img/eth.png" class="experiance-icon" alt=""></div>
+                        </div>
+                        <div>
+                            <div class="experiance-icon-circle"><a herf="https://www.autodesk.com/products/inventor/" target="_blank"><img src="img/inv.png" class="experiance-icon" alt=""></a></div>
+                        </div>
+                        <div>
+                            <div class="experiance-icon-circle"><a herf="https://www.autodesk.com/products/fusion-360" target="_blank"><img src="img/fusion.png" class="experiance-icon" alt=""></a></div>
+                        </div>
+                    </div>
+
                     <div class="experiance-subtopic-circle">
                         <h2><i class="fa fa-code" style="zoom: 200%;"></i> <br>Programming</h2>
                     </div>
                     <div class="experiance-subtopic-circle">
                         <h2><i class="fa fa-microchip" style="zoom: 200%;"></i> <br>Hardware</h2>
                     </div>
+
+                    <div class="experiance-fullscreen-container" id="experiance-fullscreen-container"></div>
                 </div>
             </div>
-
             </div>
         </section>
         <section class="container" id="contact">
@@ -457,28 +534,12 @@
                 </div>
             </div>
         </section>
+
+        <div class="theme-btn">
+            <i class="fas fa-adjust"></i>
+        </div>
     </main>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home" >
-            <i class="fas fa-home"></i>
-        </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="blogs">
-            <i class="far fa-newspaper"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
-        </div>
-    </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
     <script src="app.js"></script>
 </body>
 </html>

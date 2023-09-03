@@ -13,22 +13,22 @@
 })();
 
 function open_description_click(clickid) {
-    document.getElementById(clickid + "_description").style.display = "flex";
-    document.getElementById(clickid + "_description").style.opacity = "100%";
+    circle_obj = document.getElementById(clickid + "_description");
+    circle_obj.style.display = "flex";
+    circle_obj.style.opacity = "100%";
 
     full_container = document.getElementById("experiance-fullscreen-container");
     full_container.style.display = "flex";
     full_container.style.opacity = "100%";
 
     click_handler = function() {
-        document.getElementById(clickid + "_description").style.opacity = "0%";
+        circle_obj.style.opacity = "0%";
+        circle_obj.style.display = "none";
 
         full_container.style.opacity = "0%";
-        setTimeout(function() {
-            full_container.style.display = "none";
-        });
+        full_container.style.display = "none";
 
-        full_container.removeEventListener("click", this);
+        full_container.removeEventListener("click", click_handler);
     };
 
     full_container.addEventListener("click", click_handler);
