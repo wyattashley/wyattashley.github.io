@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="main-content">
+
+<body class="main-content" onresize="set_description_width()">
     <header class="container header active" id="home">
         <div class="header-content">
             <div class="left-header">
@@ -315,22 +316,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/img7.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fas fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -499,7 +484,7 @@
         <section class="container" id="blogs">
             <div>
                 <div class="main-title">
-                    <h2>Experience <span></span><span class="bg-text">Tools Used</span></h2>
+                    <h2>My <span>Experience</span><span class="bg-text">Tools Used</span></h2>
                 </div>
 
                 <div class="experiance portfolios">
@@ -508,59 +493,60 @@
                     </div>
                     
                     <div class="experiance-description-circle" id="vision_description">
-                        <div>
-                            <div class="experiance-icon-circle">
-                                <div class="image">
-                                    <img src="img/ocv.png" class="experiance-icon" alt="">
-                                </div> 
+                        <table>
+                            <tr>
+                                <th>
+                                    <div class="experiance-icon-circle">
+                                        <div class="image">
+                                            <img src="img/ocv.png" class="experiance-icon" alt="">
+                                        </div> 
+        
+                                        <div class="hover-items">
+                                            <h2>OpenCV</h2>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="experiance-icon-circle">
+                                        <div class="image">
+                                            <img src="img/tf.png" class="experiance-icon" alt="">
+                                        </div> 
+        
+                                        <div class="hover-items">
+                                            <h2>TensorFlow</h2>
+                                        </div>
+                                    </div>
+                                </th>
 
-                                <div class="hover-items">
-                                    <h2>OpenCV</h2>
-                                </div>
-                            </div>
-                            
-                            <div class="experiance-icon-circle">
-                                <div class="image">
-                                    <img src="img/tf.png" class="experiance-icon" alt="">
-                                </div> 
+                                <th>
+                                    <div class="experiance-icon-circle">
+                                        <div class="image">
+                                            <img src="img/spv.png" class="experiance-icon" alt="">
+                                        </div> 
+        
+                                        <div class="hover-items">
+                                            <h2>Supervisely</h2>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
 
-                                <div class="hover-items">
-                                    <h2>TensorFlow</h2>
-                                </div>
-                            </div>
-
-                            <div class="experiance-icon-circle">
-                                <div class="image">
-                                    <img src="img/spv.png" class="experiance-icon" alt="">
-                                </div> 
-
-                                <div class="hover-items">
-                                    <h2>Supervisely</h2>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="experiance-icon-circle">
-                                <div class="image">
-                                    <img src="img/ml.png" class="experiance-icon" alt="">
-                                </div> 
-
-                                <div class="hover-items">
-                                    <h2>ML.NET</h2>
-                                </div>
-                            </div>
-
-                            <div class="experiance-icon-circle"></div>
-                            <div class="experiance-icon-circle"></div>
-                            <div class="experiance-icon-circle"></div>
-                        </div>
-
-                        <div>
-                            <div class="experiance-icon-circle"></div>
-                            <div class="experiance-icon-circle"></div>
-                            <div class="experiance-icon-circle"></div>
-                        </div>
+                            <tr>
+                                <th>
+                                    <div class="experiance-icon-circle">
+                                        <div class="image">
+                                            <img src="img/ml.png" class="experiance-icon" alt="">
+                                        </div> 
+        
+                                        <div class="hover-items">
+                                            <h2>ML.NET</h2>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </table>
                     </div>
 
                     <div class="experiance-subtopic-circle"  onclick="open_description_click(this.id)" id="cad">

@@ -475,6 +475,7 @@ section {
 .experiance {
   display: grid;
   justify-content: center;
+  vertical-align: center;
   align-items: center;
 
   padding-top: 30px;
@@ -615,8 +616,12 @@ section {
   cursor: pointer;
   background-color: var(--color-primary);
 
+  aspect-ratio: 1 / 1;
+  width: 17.5vmin;
+  /*
   width: 150px;
   height: 150px;
+  */
   
   border-radius: 50%;
   display: flex;
@@ -680,13 +685,13 @@ section {
 .experiance-description-circle {
   background-color: var(--color-grey-4);
   aspect-ratio: 1 / 1;
-  height: 100%;
+  width: 100vmin;
   border-radius: 50%;
 
   position: absolute;
   z-index: 20;
-  bottom: 0%;
   left: 25%;
+  top: 0%;
 
   justify-content: center;
   align-items: center;
@@ -1056,5 +1061,3 @@ section {
     font-size: 4rem;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
