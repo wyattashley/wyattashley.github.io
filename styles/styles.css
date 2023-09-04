@@ -550,6 +550,53 @@ section {
   font-size: 1.3rem;
 }
 
+.stat-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding-top: 20px;
+}
+
+.stat-item {
+  border: 1px solid var(--color-grey-5);
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.stat-item:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
+
+.stat-item .abt-text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.stat-item .abt-text .large-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+.stat-item .abt-text .small-text {
+  padding-left: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--color-grey-1);
+  letter-spacing: 2px;
+}
+.stat-item .abt-text .small-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--color-grey-5);
+}
 
 /*Independed components*/
 
@@ -599,6 +646,13 @@ section {
   opacity: 0;
   transform: scale(0);
   transition: all 0.4s ease-in-out;
+}
+
+.experiance-icon-circle .hover-items h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 .experiance-icon-circle:hover .hover-items {
@@ -664,8 +718,6 @@ section {
   -o-transition: opacity 0.75s;
   -moz-transition: opacity 0.75s;
   -webkit-transition: opacity 0.75s;
-
-
 }
 
 .btn-con {
