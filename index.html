@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="main-content">
+
+<body class="main-content" onresize="set_description_width()">
     <header class="container header active" id="home">
         <div class="header-content">
             <div class="left-header">
@@ -26,21 +27,35 @@
                     A Goal Driven Student.
                 </h1>
                 <p>
-                    I'm a Web Developer, I love to create beautiful and functional websites.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, libero?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque blanditiis sed aut!
+                    &emsp;I'm a student at the University of Michigan pursuiting a degree in Computer Science. This website
+                    is <b>under-contruction</b> so feel free to contact me directly for more information or more projects.
+                    <br><br>
+                    &emsp;As a budding computer scientist, I have embarked on a dynamic journey of discovery and growth, 
+                    traversing the realms of programming languages, data structures, and software development 
+                    methodologies. This portfolio serves as a testament to my dedication to this field and showcases 
+                    the knowledge and skills I have acquired throughout my academic pursuits.
                 </p>
-                <div class="btn-con">
-                    <a href="" class="main-btn">
-                        <span class="btn-text">Download CV</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                </div>
             </div>
         </div>
     </header>
     <main>
-        <div class="experiance-fullscreen-container" id="experiance-fullscreen-container"></div>
+      <div class="controls">
+          <div class="control active-btn" data-id="home" >
+              <i class="fas fa-home"></i>
+          </div>
+          <div class="control" data-id="about">
+              <i class="fas fa-user"></i>
+          </div>
+          <div class="control" data-id="portfolio">
+              <i class="fas fa-newspaper"></i>
+          </div>
+          <div class="control" data-id="blogs">
+              <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="control" data-id="contact">
+              <i class="fas fa-envelope-open"></i>
+          </div>
+      </div>
 
         <section class="container about" id="about">
             <div class="main-title">
@@ -58,12 +73,6 @@
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                         Harum non necessitatibus deleniti eum soluta.
                     </p>
-                    <div class="btn-con">
-                        <a href="#" class="main-btn">
-                            <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
-                        </a>
-                    </div>
                 </div>
                 <div class="right-about">
                     <div class="about-item">
@@ -200,24 +209,18 @@
                 <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
             </div>
             <p class="port-text">
-                Here is some of my work that I've done in various programming languages.
+                Here is some of my past projects. Hover and click the image to view further details.
             </p>
             <div class="portfolios">
                 <div class="portfolio-item">
                     <div class="image">
                         <img src="img/img1.jpg" alt="">
                     </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
+                    <div class="hover-items control" data-id="FRC2022">
+                        <h3>FRC 2022</h3>
                         <div class="icons">
                             <a href="https://www.thebluealliance.com/team/2137/2021" class="icon" target="_blank">
                                 <i class="fas fa-link"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
                             </a>
                         </div>
                     </div>
@@ -226,18 +229,9 @@
                     <div class="image">
                         <img src="img/img2.jpg" alt="">
                     </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
+                    <div class="hover-items control" data-id="T-Shirt">
+                        <h3>T-Shirt Cannon</h3>
                         <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -246,16 +240,23 @@
                         <img src="img/img3.jpg" alt="">
                     </div>
                     <div class="hover-items">
-                        <h3>Project Source</h3>
+                        <h3>FRC 2021</h3>
                         <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
                             <a href="https://www.youtube.com/watch?v=QloYJaMhsfs" class="icon" target="_blank">
                                 <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="image">
+                        <img src="img/img6.jpg" alt="">
+                    </div>
+                    <div class="hover-items control" data-id="SquareONE">
+                        <h3>Square ONE</h3>
+                        <div class="icons">
+                            <a href="https://www.squareonenetwork.org/" class="icon" target="_blank">
+                                <i class="fas fa-link"></i>
                             </a>
                         </div>
                     </div>
@@ -267,15 +268,6 @@
                     <div class="hover-items">
                         <h3>Project Source</h3>
                         <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -286,102 +278,374 @@
                     <div class="hover-items">
                         <h3>Project Source</h3>
                         <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port2.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port7.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-behance"></i>
-                            </a>
-                            <a href="#" class="icon">
-                                <i class="fas fa-link"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!--FRC 2022-->
+        <section class="container" id="FRC2022">
+            <div>
+                <div class="main-title">
+                    <h2>2022 <span></span><span class="bg-text">FIRST Robotics</span></h2>
+                </div>
+
+                <table style="padding-top: 80px;">
+                  <tr style="vertical-align: top;">
+                    <th style="width: 33%;">
+                      <h2>Drive Train</h2>
+                      <img src="img/swerve_mod.png" style="width: 100%"></img>
+                    </th>
+                    <th style="width: 33%;">
+                      <h2>Launcher</h2>
+                      <img src="img/launcher.png"  style="width: 100%"></img>
+                    </th>
+                    <th style="width: 33%;">
+                      <h2>Intake</h2>
+                    </th>
+                  </tr>
+
+                  <tr style="vertical-align: top;">
+                    <th style="width: 33%;">
+                      <p style="text-align: left;">
+                        &emsp;In the realm of robotics, the Swerve Chassis represents
+                        a significant innovation that seamlessly combines precision, agility, 
+                        and versatility. This technology incorporates four rotational and 
+                        translational axes, introducing complexity when configuring the forward 
+                        and reverse kinematic equations.
+                        <br><br>
+                        &emsp;My primary responsibility within the project was to develop these 
+                        essential equations, ensuring that with just three input commands 
+                        (left/right, forward/reverse, and turning), all four wheels operate 
+                        in harmony. This experience underscores my capability to address 
+                        intricate engineering challenges and contribute to the advancement of 
+                        robotics.
+                      </p>
+                    </th>
+                    <th style="width: 33%;">
+                      <p style="text-align: left;  padding-left: 20px;">
+                        &emsp;For this particular season, our team made the strategic decision to 
+                        incorporate a two-wheel launcher into our setup, offering us the 
+                        capability to apply precise amounts of spin to the game ball. 
+                        In my role, I took charge of prototyping, contributed to the design 
+                        process, and successfully programmed the control system responsible 
+                        for launching the ball.
+                        <br><br>
+                        &emsp;By implementing variable spin and adjustable launch distances, 
+                        I was able to create an adaptive launcher that proved to be highly 
+                        effective in scoring the ball from any position on the field. This 
+                        project highlights my skills in both hardware development and programming.
+                      </p>
+                    </th>
+                    <th style="width: 33%;">
+                      <p style="text-align: left;  padding-left: 20px;">
+                        &emsp;Due to the fact the game piece being a sizable ball, our team collectively 
+                        opted for a two-stage compliant wheel intake mechanism. In the initial 
+                        stage, the ball was taken in by our primary intake, after which 
+                        it proceeded to a wheeled condenser. This secondary stage was responsible 
+                        for positioning the ball more predictably, preparing it for a 
+                        more accurate launch.
+                        <br><br>
+                        &emsp;This decision demonstrates thoughtful approach to game strategy and 
+                        ability to devise a well-coordinated, multi-stage solution to address the 
+                        challenges posed by the game piece.
+                      </p>
+                    </th>
+                  </tr>
+
+
+                  <tr style="vertical-align: top;">
+                    <th style="width: 33%;">
+                      <h2>Vision</h2>
+                      <img src="img/limelight.jpg" style="width: 100%"></img>
+                    </th>
+                  </tr>
+
+                  <tr style="vertical-align: top;">
+                    <th style="width: 33%;">
+                      <p style="text-align: left;">
+                        &emsp;For the 2022 season the field had different 3M reflective tape strips that
+                        could be used for robot positioning and navigation. By using bright green lights
+                        the tape could be identified by the high amounts of green light reflected back.
+                        The ability to used these strip was an intergral part of an auto alignment system
+                        that I created inorder to speed up aligning the robot to the goal. Furthermore by
+                        detecting the area of the tap the robot distance could also be calculated and
+                        the launcher speed could be adjusted accordingly.
+                      </p>
+                    </th>
+                  </tr>
+                </table>
+            </div>
+        </section>
+
+        <!--T-Shirt Cannon-->
+        <section class="container" id="T-Shirt">
+            <div>
+                <div class="main-title">
+                    <h2>Oxford <span></span><span class="bg-text">T-Shirt Cannon</span></h2>
+                </div>
+
+                <table style="padding-top: 80px;">
+                    <tr>
+                        <th style="width: 50%;">
+                            <img src="img/t-shirt-v1.jpg" style="border-radius: 15px;"></img>
+                        </th>
+                        <th style="width: 50%;">
+                            <h2>Version 1</h2>
+                            <p style="text-align: left; padding-left: 20px;">
+                                &emsp;One of the most significant undertakings during my tenure on the 
+                                team was the design and construction of an Air-Powered T-Shirt Cannon. 
+                                Taking charge of the entire design process, our initial version was 
+                                essentially a prototype, serving as the foundation upon which we would
+                                refine the final product.
+                                <br>
+                                &emsp;In the image, you can see the first version of our T-Shirt cannon,
+                                which employed a single air-tank system equipped with dual air-compressors. 
+                                The design included smaller secondary storage tanks, each attached to individual 
+                                cannons, pressurized to varying levels for different shooting distances. A key 
+                                component was a 2-inch sprinkler valve, which was controlled to release the 
+                                compressed air.
+                                <br>
+                                &emsp;To ensure optimal performance, the T-Shirt cannon's drive train was 
+                                constructed using durable stainless steel chains connected to a planetary 
+                                gear set. This dynamic setup was driven by two independent Falcon motors on 
+                                either side, delivering an abundance of power.
+                            </p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="width: 50%;">
+                            <h2>Version 2</h2>
+                            
+                            <p style="text-align: left; padding-left: 20px;">
+                                &emsp;In this image, you'll see the second iteration of our T-Shirt cannon, 
+                                which underwent significant improvements. We incorporated a dual air-tank 
+                                system, increasing the reservoir's capacity for enhanced performance.
+                                <br>
+                                &emsp;For this second version, we improved stability by replacing the vertical 
+                                supports with sturdy 1.5-inch aluminum A-Frame supports. Moreover, we introduced 
+                                eye-catching LED panels that wrapped the robot's exterior, offering 
+                                advertising space. The machine's power source comprises two 60Ah car batteries, 
+                                efficiently driving the drivetrain while separately powering the display panels 
+                                and compressor.
+                                <br>
+                                &emsp;During the second-day field test, the T-Shirt cannon showcased its capabilities 
+                                with an impressive maximum range exceeding 192 feet, hitting the wall at a height of 
+                                over 20 feet off the ground. This project serves as a testament of expertise 
+                                in design, programming, and engineering.
+                            </p>
+                        </th>
+
+                        <th style="width: 50%;">
+                            <img src="img/t-shirt-v2.jpg" style="border-radius: 15px;"></img>
+                        </th>
+                    </tr>
+                </table>
+
+                <div class="stat-container">
+                    <div class="stat-item">
+                        <div class="abt-text">
+                            <p class="large-text">192'+</p>
+                            <p class="small-text">Launching<br/> Distance</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="abt-text">
+                            <p class="large-text">12,000+</p>
+                            <p class="small-text">Dollars<br/>Spent</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="abt-text">
+                            <p class="large-text">1,000+</p>
+                            <p class="small-text">Working<br/>Hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Square ONE-->
+        <section class="container" id="SquareONE">
+            <div>
+                <div class="main-title">
+                    <h2>Oxford <span></span><span class="bg-text">Square ONE</span></h2>
+                </div>
+
+                <img src="img/square_one.jpg" style="border-radius: 15px; align-self: center; width: 100%; padding-top: 50px;"></img>
+
+                <table style="padding-top: 80px;">
+                    <tr>
+                        <th style="width: 50%;">
+                            <h2>Mechanical</h2>
+                            
+                            <p style="text-align: left; padding-left: 20px;">
+                                &emsp;The kart design featured three wheels in the hopes of reducing inefficient 
+                                turning without the use of a differential on the back axle. Furthermore, we 
+                                created a fully aluminum chassis and roll cage to reduce as much weight as 
+                                possible for a longer runtime. Yet another feature on the kart was an adjustable 
+                                seat to ensure that everyone on the team could fit inside the kart. Finally, the 
+                                suspension consisted of two independent shocks for the front wheels and two 
+                                parrallel shocks for the rear wheel.
+                            </p>
+                        </th>
+
+                        <th style="width: 50%;">
+                            <h2>Electrical</h2>
+                            
+                            <p style="text-align: left; padding-left: 20px;">
+                                &emsp;My main focus on the car was everything electrical, however I was apart of every aspect.
+                                The elctrical consisted on an electric motor, two touch screen displays, 6 ultrasonic heads up sensor,
+                                2 shunts, reverse module, speedometer, accelerometer, pnuematic pump, pnuematic actuated shifter, and anti-tip sensor.
+                                All of this proved to be a formitable task to integrate together into a coerant end user product,
+                                however throught the school year and with mich dedication it all did. The features the kart had were
+                                much more than expected however it proved to be impressive to all of the judges, as our team won more
+                                awards as any other.  
+                            </p>
+                        </th>
+                    </tr>
+                </table>
+
+                <div class="stat-container">
+                    <div class="stat-item">
+                        <div class="abt-text">
+                            <p class="large-text">192'+</p>
+                            <p class="small-text">Launching<br/> Distance</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="abt-text">
+                            <p class="large-text">12,000+</p>
+                            <p class="small-text">Dollars<br/>Spent</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="abt-text">
+                            <p class="large-text">1,000+</p>
+                            <p class="small-text">Working<br/>Hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="container" id="blogs">
             <div>
                 <div class="main-title">
-                    <h2>Experience <span></span><span class="bg-text">Tools Used</span></h2>
+                    <h2>My <span>Experience</span><span class="bg-text">Tools Used</span></h2>
                 </div>
 
                 <div class="experiance portfolios">
                     <div class="experiance-subtopic-circle" onclick="open_description_click(this.id)" id="vision">
                         <h2><i class="fa fa-eye" style="zoom: 200%;"></i> <br>Vision</h2>
                     </div>
+                    
                     <div class="experiance-description-circle" id="vision_description">
+                        <table>
+                            <tr>
+                                <th>
+                                    <div class="experiance-icon-circle">
+                                        <div class="image">
+                                            <img src="img/ocv.png" class="experiance-icon" alt="">
+                                        </div> 
+        
+                                        <div class="hover-items">
+                                            <h2>OpenCV</h2>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="experiance-icon-circle">
+                                        <div class="image">
+                                            <img src="img/tf.png" class="experiance-icon" alt="">
+                                        </div> 
+        
+                                        <div class="hover-items">
+                                            <h2>TensorFlow</h2>
+                                        </div>
+                                    </div>
+                                </th>
+
+                                <th>
+                                    <div class="experiance-icon-circle">
+                                        <div class="image">
+                                            <img src="img/spv.png" class="experiance-icon" alt="">
+                                        </div> 
+        
+                                        <div class="hover-items">
+                                            <h2>Supervisely</h2>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <div class="experiance-icon-circle">
+                                        <div class="image">
+                                            <img src="img/ml.png" class="experiance-icon" alt="">
+                                        </div> 
+        
+                                        <div class="hover-items">
+                                            <h2>ML.NET</h2>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="experiance-subtopic-circle"  onclick="open_description_click(this.id)" id="cad">
+                        <h2><i class="fa fa-pencil-ruler" style="zoom: 200%;"></i> <br>CAD</h2>
+                    </div>
+                    <div class="experiance-description-circle" id="cad_description">
                         <div>
-                            <div class="experiance-icon-circle"><img src="img/ocv.png" class="experiance-icon" alt=""></div>
-                            <div class="experiance-icon-circle"><img src="img/tf.png" class="experiance-icon" alt=""></div>
-                            <div class="experiance-icon-circle"><img src="img/spv.png" class="experiance-icon" alt=""></div>
+                            <div class="experiance-icon-circle">
+                              <a herf="https://www.solidworks.com/" target="_blank">
+                                <img src="img/sw.png" class="experiance-icon" alt="">
+                              </a>
+                            </div>
                         </div>
                         <div>
-                            <div class="experiance-icon-circle"><img src="img/ml.png" class="experiance-icon" alt=""></div>
-                            <div class="experiance-icon-circle"></div>
-                            <div class="experiance-icon-circle"></div>
-                            <div class="experiance-icon-circle"></div>
-                        </div>                        
+                            <div class="experiance-icon-circle"><a herf="https://www.autodesk.com/products/inventor/" target="_blank"><img src="img/inv.png" class="experiance-icon" alt=""></a></div>
+                        </div>
                         <div>
-                            <div class="experiance-icon-circle"></div>
-                            <div class="experiance-icon-circle"></div>
-                            <div class="experiance-icon-circle"></div>
+                            <div class="experiance-icon-circle"><a herf="https://www.autodesk.com/products/fusion-360" target="_blank"><img src="img/fusion.png" class="experiance-icon" alt=""></a></div>
                         </div>
                     </div>
 
-                    <div class="experiance-subtopic-circle">
-                        <h2><i class="fa fa-pencil-ruler" style="zoom: 200%;"></i> <br>CAD</h2>
-                    </div>
-                    <div class="experiance-subtopic-circle">
+                    <div class="experiance-subtopic-circle"  onclick="open_description_click(this.id)" id="protocol">
                         <h2><i class="fa fa-signal" style="zoom: 200%;"></i> <br>Protocol</h2>
                     </div>
+                    <div class="experiance-description-circle" id="protocol_description">
+                        <div>
+                            <div class="experiance-icon-circle"><a herf="https://www.solidworks.com/" target="_blank"><img src="img/eth.png" class="experiance-icon" alt=""></div>
+                        </div>
+                        <div>
+                            <div class="experiance-icon-circle"><a herf="https://www.autodesk.com/products/inventor/" target="_blank"><img src="img/inv.png" class="experiance-icon" alt=""></a></div>
+                        </div>
+                        <div>
+                            <div class="experiance-icon-circle"><a herf="https://www.autodesk.com/products/fusion-360" target="_blank"><img src="img/fusion.png" class="experiance-icon" alt=""></a></div>
+                        </div>
+                    </div>
+
                     <div class="experiance-subtopic-circle">
                         <h2><i class="fa fa-code" style="zoom: 200%;"></i> <br>Programming</h2>
                     </div>
                     <div class="experiance-subtopic-circle">
                         <h2><i class="fa fa-microchip" style="zoom: 200%;"></i> <br>Hardware</h2>
                     </div>
+
+                    <div class="experiance-fullscreen-container" id="experiance-fullscreen-container"></div>
                 </div>
             </div>
-
             </div>
         </section>
         <section class="container" id="contact">
@@ -457,28 +721,12 @@
                 </div>
             </div>
         </section>
+
+        <div class="theme-btn">
+            <i class="fas fa-adjust"></i>
+        </div>
     </main>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home" >
-            <i class="fas fa-home"></i>
-        </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="blogs">
-            <i class="far fa-newspaper"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
-        </div>
-    </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
     <script src="app.js"></script>
 </body>
 </html>
