@@ -472,15 +472,6 @@ section {
   transform: scale(1);
 }
 
-.experiance {
-  display: grid;
-  justify-content: center;
-  vertical-align: center;
-  align-items: center;
-
-  padding-top: 30px;
-}
-
 .contact-content-con {
 
   align-items: center;
@@ -669,8 +660,8 @@ section {
   z-index: 10;
   cursor: pointer;
   background-color: var(--color-secondary);
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 50%;
   
   display: flex;
@@ -690,7 +681,6 @@ section {
 
   position: absolute;
   z-index: 20;
-  left: 25%;
   top: 0%;
 
   justify-content: center;
